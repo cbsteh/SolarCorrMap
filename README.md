@@ -10,15 +10,19 @@ Furthermore, some of these planets have their own moons. These moons represent e
 
 You can also regard the planets as the primary predictors (or main parameters) of the dependent variable and the moons as the colinear paramaters to the main parameters.
 
-This work is based on the 2017 work by Stefan Zapf and Christopher Kraushaar (see References).
+This work builds on [Stefan Zapf and Christopher Kraushaar's 2017 work](https://www.oreilly.com/content/a-new-visualization-to-beautifully-explore-correlations/) but differs in a few key ways. This work uses fewer colors in the graph, can display more explanatory variables through numerical representation, and tries to position markers to avoid overlap or excessive closeness.
 
 ## Usage
-Copy the three Julia source files in the `src` folder: `correlations.jl`, `drawmap.jl`, and `SolarCorrMap.jl`, and paste them in your project folder or subfolder.
+Clone the repo by
 
-Note: The `main.jl` is an example file (see below).
+```
+https://github.com/cbsteh/SolarCorrMap.git
+```
+
+The three important Julia source files are in the `src` folder. They are: `correlations.jl`, `drawmap.jl`, and `SolarCorrMap.jl`. The fourth file `main.jl` is an example file (see below).
 
 ## Example
-Call the `viz` function to read the `CSV` data file and plot the correlations as a solar map.
+Call the `viz` function to read the `CSV` data file, and plot the correlations as a solar map (see `main.jl`).
 
 ```
 using SolarCorrMap
@@ -26,7 +30,7 @@ using SolarCorrMap
 viz("data/housing.csv", :medv)
 ```
 
-where `housing.csv` is a sample `CSV` file (Boston Housing data), and `:medv` is the dependent variable in the provided `CSV` file.
+where `housing.csv` is a `CSV` file (in this case, the Boston Housing data), and `:medv` is the dependent variable in the provided `CSV` file.
 
 The plot result is:
 
