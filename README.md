@@ -12,6 +12,8 @@ You can also regard the planets as the primary predictors (or main parameters) o
 
 This work builds on [Stefan Zapf and Christopher Kraushaar's 2017 work](https://www.oreilly.com/content/a-new-visualization-to-beautifully-explore-correlations/) but differs in a few key ways. This work uses fewer colors in the graph, can display more explanatory variables through numerical representation, and tries to position markers to avoid overlap or excessive closeness.
 
+Note: any correlations having absolute values between 0.0 and 0.1 are not plotted. This is create more space in the plot for variables that have higher and presumably more important association with the dependent variable.
+
 ## Usage
 Clone the repo by
 
